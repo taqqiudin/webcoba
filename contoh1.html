@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluang Kelas 8</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4a90e2, #003366);
+            padding: 1rem 0;
+            width: 100%;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffdd57;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .home {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .home h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .home p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #4a90e2;
+            color: hsl(0, 0%, 100%); /* Warna teks putih */
+            text-align: center; /* Teks di tengah */
+            padding: 1rem 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        footer {
+            display: flex;
+            color: rgb(255, 255, 255); /* Warna teks putih */
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+        }
+        footer p {
+            color: white !important;
+        }
+        .background-image {
+            width: 50%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #4a90e2;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .burger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger.toggle .line2 {
+                opacity: 0;
+            }
+
+            .burger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+
+        /* Gaya tambahan untuk bagian materi peluang */
+        .content-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .formula {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .solution {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Peluang Kelas 8</div>
+            <ul class="nav-links">
+                <li><a href="home.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="materi1.html"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="contoh1.html"><i class="fas fa-pencil-alt"></i> Contoh Soal</a></li>
+                <li><a href="latihan1.html"><i class="fas fa-edit"></i> Latihan</a></li>
+                <li><a href="kuis1.html"><i class="fas fa-question-circle"></i> Kuis</a></li>
+                <li><a href="kontak1.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Contoh Soal Peluang Kelas 8</h1>
+        
+        <!-- Soal 1 -->
+        <div class="content-container">
+            <h2>Soal 1: Pelemparan Koin</h2>
+            <p class="question">Sebuah koin dilempar sekali. Tentukan peluang munculnya gambar!</p>
+            <img src="koin 1.jpg" class="rounded" alt="Pelemparan Koin"> 
+            <div class="solution">
+                <p><strong>Pembahasan:</strong></p>
+                <p>Ruang sampel (S) = {Gambar, Angka}</p>
+                <p>Jumlah kejadian yang mungkin = 2</p>
+                <p>Jumlah kejadian yang diharapkan (gambar) = 1</p>
+                <p>Peluang (P) = Jumlah Kejadian yang Diharapkan / Jumlah Kejadian yang Mungkin = 1/2</p>
+                <p><strong>Jadi, peluang munculnya gambar adalah ½ atau 0.5.</strong></p>
+            </div>
+        </div>
+
+        <!-- Soal 2 -->
+        <div class="content-container">
+            <h2>Soal 2: Pelemparan Dadu</h2>
+            <p class="question">Sebuah dadu dilempar sekali. Berapakah peluang munculnya bilangan genap?</p>
+            <img src="dadu1.jpg" class="rounded" alt="Pelemparan Dadu"> 
+            <div class="solution">
+                <p><strong>Pembahasan:</strong></p>
+                <p>Ruang sampel (S) = {1, 2, 3, 4, 5, 6}</p>
+                <p>Jumlah kejadian yang mungkin = 6</p>
+                <p>Bilangan genap = {2, 4, 6} → Jumlah kejadian yang diharapkan = 3</p>
+                <p>Peluang (P) = 3/6 = 1/2</p>
+                <p><strong>Jadi, peluang munculnya bilangan genap adalah ½ atau 0.5.</strong></p>
+            </div>
+        </div>
+
+        <!-- Soal 3 -->
+        <div class="content-container">
+            <h2>Soal 3: Mengambil Kelereng dari Kantong</h2>
+            <p class="question">Di dalam sebuah kantong terdapat 5 kelereng merah, 3 kelereng biru, dan 2 kelereng hijau. Jika diambil satu kelereng, berapakah peluang mengambil kelereng biru?</p>
+            <img src="kelereng1.jpeg" class="rounded" alt="Kelereng"> 
+            <div class="solution">
+                <p><strong>Pembahasan:</strong></p>
+                <p>Jumlah total kelereng = 5 + 3 + 2 = 10</p>
+                <p>Jumlah kejadian yang diharapkan (kelereng biru) = 3</p>
+                <p>Peluang (P) = Jumlah Kejadian yang Diharapkan / Jumlah Kelereng Total = 3/10</p>
+                <p><strong>Jadi, peluang mengambil kelereng biru adalah 3/10 atau 0.3.</strong></p>
+            </div>
+        </div>
+
+        <!-- Soal 4: Mengambil Bola dari Keranjang -->
+        <div class="content-container">
+            <h2>Soal 4: Mengambil Bola dari Keranjang</h2>
+            <p class="question">Di dalam sebuah keranjang terdapat 4 bola merah, 3 bola hijau, dan 5 bola biru. Jika diambil satu bola, berapakah peluang mengambil bola merah?</p>
+        
+            <div class="solution">
+                <p><strong>Pembahasan:</strong></p>
+                <p>Jumlah total bola = 4 + 3 + 5 = 12</p>
+                <p>Jumlah kejadian yang diharapkan (bola merah) = 4</p>
+                <p>Peluang (P) = Jumlah Kejadian yang Diharapkan / Jumlah Bola Total = 4/12 = 1/3</p>
+                <p><strong>Jadi, peluang mengambil bola merah adalah 1/3 atau 0.33.</strong></p>
+            </div>
+        </div>
+
+        <!-- Soal 5: Menarik Kartu dari Dek -->
+        <div class="content-container">
+            <h2>Soal 5: Menarik Kartu dari Dek</h2>
+            <p class="question">Di dalam sebuah dek kartu terdapat 52 kartu, di mana 26 kartu adalah kartu merah dan 26 kartu adalah kartu hitam. Jika diambil satu kartu, berapakah peluang mengambil kartu merah?</p>
+            <img src="kartu1.jpg" class="rounded" alt="Kartu"> 
+            <div class="solution">
+                <p><strong>Pembahasan:</strong></p>
+                <p>Jumlah total kartu = 52</p>
+                <p>Jumlah kejadian yang diharapkan (kartu merah) = 26</p>
+                <p>Peluang (P) = Jumlah Kejadian yang Diharapkan / Jumlah Kartu Total = 26/52 = 1/2</p>
+                <p><strong>Jadi, peluang mengambil kartu merah adalah 1/2 atau 0.5.</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Materi Peluang Kelas 8. Hartati Rintan.</p>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+</html>
